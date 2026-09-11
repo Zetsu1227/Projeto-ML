@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 498406399263087814, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.437501
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 498406399263087814, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.2592297
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 498406399263087814, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.8011975
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 498406399263087814, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       propertyPath: m_LocalRotation.w
@@ -50,7 +50,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       propertyPath: m_Name
-      value: Banana_01 Variant
+      value: Banana
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -58,17 +58,54 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 3108228403916052921}
+      addedObject: {fileID: -8655271294180388780}
     - targetCorrespondingSourceObject: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -8655271294180388780}
+      addedObject: {fileID: -3051671160565750993}
+    - targetCorrespondingSourceObject: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: -1318227430559478277}
   m_SourcePrefab: {fileID: 100100000, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
 --- !u!1 &1618061693844333125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
   m_PrefabInstance: {fileID: 2005759758147642425}
   m_PrefabAsset: {fileID: 0}
---- !u!54 &3108228403916052921
+--- !u!65 &-8655271294180388780
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618061693844333125}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.24513766, y: 0.4040103, z: 0.73721635}
+  m_Center: {x: 0.0000050850213, y: 0.19985446, z: -0.021872088}
+--- !u!114 &-3051671160565750993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618061693844333125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4da68cc5d15cabf45bbbf4d534b45845, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RotateObstacle
+  rotateSpeed: 20
+--- !u!54 &-1318227430559478277
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -95,24 +132,3 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &-8655271294180388780
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1618061693844333125}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.24513766, y: 0.4040103, z: 0.73721635}
-  m_Center: {x: 0.0000050850213, y: 0.19985446, z: -0.021872088}

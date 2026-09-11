@@ -1,16 +1,32 @@
 using UnityEngine;
+using System.Collections;
 
 public class SpawnObstacles : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
+    [SerializeField]private GameObject[] obstacles;
+
+    private int obstacleIndex;
+
     void Start()
     {
-        
+        SpawnObstacle();
+        StartCoroutine(SpawnAfterCooldown());
     }
 
-    // Update is called once per frame
-    void Update()
+    void SpawnObstacle()
     {
-        
+        obstacleIndex = Random.Range(0, obstacles.Length);
+
+        Instantiate(obstacles[obstacleIndex], transform.position, Quaternion.identity);
+    }
+
+    IEnumerator SpawnAfterCooldown()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(2f);
+            SpawnObstacle();
+        }
     }
 }
