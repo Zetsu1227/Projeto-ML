@@ -64,7 +64,10 @@ PrefabInstance:
       addedObject: {fileID: -3051671160565750993}
     - targetCorrespondingSourceObject: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
       insertIndex: -1
-      addedObject: {fileID: -1318227430559478277}
+      addedObject: {fileID: 1938960320975591828}
+    - targetCorrespondingSourceObject: {fileID: 982173216399935100, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6278520602013992918}
   m_SourcePrefab: {fileID: 100100000, guid: 88d0ae3f506ed25438c1b7516ea44b69, type: 3}
 --- !u!1 &1618061693844333125 stripped
 GameObject:
@@ -105,7 +108,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RotateObstacle
   rotateSpeed: 20
---- !u!54 &-1318227430559478277
+--- !u!114 &1938960320975591828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1618061693844333125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e492a1c34d3fb3849863024844b4fbce, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Obstacle
+  fallSpeed: 1.2
+  particlePrefab: {fileID: 120410, guid: 6636b3078b0905e489f698a11b7a6b6b, type: 3}
+  recompensa: 5
+--- !u!54 &6278520602013992918
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -127,7 +145,7 @@ Rigidbody:
     m_Bits: 0
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
-  m_UseGravity: 1
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
