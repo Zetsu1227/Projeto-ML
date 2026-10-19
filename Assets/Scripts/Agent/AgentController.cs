@@ -1,6 +1,5 @@
 using UnityEngine;
 
-
 public class AgentController : MonoBehaviour
 {
 
@@ -51,7 +50,7 @@ public class AgentController : MonoBehaviour
         float closestDistance = Mathf.Infinity;
 
         // Procura todos os obstáculos que existem atualmente na cena.
-        Obstacle[] obstacles = FindObjectsOfType<Obstacle>();
+        Obstacle[] obstacles = FindObjectsByType<Obstacle>(FindObjectsSortMode.None);
 
         foreach (Obstacle obstacle in obstacles)
         {
