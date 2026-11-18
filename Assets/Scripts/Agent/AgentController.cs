@@ -158,9 +158,6 @@ public class AgentController : MonoBehaviour
 
     private void MoveLeft()
     {
-        if (currentColumn <= 0)
-            return;
-
         currentColumn--;
 
         MoveToColumn(currentColumn);
@@ -168,9 +165,6 @@ public class AgentController : MonoBehaviour
 
     private void MoveRight()
     {
-        if (currentColumn >= columnPositions.Length - 1)
-            return;
-
         currentColumn++;
 
         MoveToColumn(currentColumn);
@@ -182,6 +176,14 @@ public class AgentController : MonoBehaviour
             columnPositions[column].position.x,
             transform.position.y,
             transform.position.z
+        );
+    }
+    
+    private ActionType[] GetAvailableActions()
+    {
+        return ActionManager.GetAvailableActions(
+            currentColumn,
+            columnPositions.Length
         );
     }
 }
