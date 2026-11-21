@@ -43,19 +43,29 @@ public class QLearning : MonoBehaviour
         // Exploração: escolher uma ação aleatória
         if (Random.value < explorationRate)
             return actions[Random.Range(0, actions.Length)];
-        
 
-        // Aproveitamento: escolher a ação com maior valor Q
+
+        // Aproveitamento: escolher aleatoriamente entre as ações de maior valor Q
         float[] values = qTable[stateKey];
-        int bestAction = 0;
+        float maxValue = values[0];
+        List<int> bestActions = new List<int> { 0 };
 
         for (int i = 1; i < values.Length; i++)
         {
-            if (values[i] > values[bestAction])
-                bestAction = i;
+            if (values[i] > maxValue)
+            {
+                maxValue = values[i];
+                bestActions.Clear();
+                bestActions.Add(i);
+            }
+            else if (values[i] == maxValue)
+            {
+                bestActions.Add(i);
+            }
         }
 
-        return actions[bestAction];
+        int chosenIndex = bestActions[Random.Range(0, bestActions.Count)];
+        return actions[chosenIndex];
     }
 
 
